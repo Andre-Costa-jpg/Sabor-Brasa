@@ -1,0 +1,103 @@
+{
+  "pedidos": [
+    {
+      "codigo": "1762620100001",
+      "data": "08/11/2026 12:15",
+      "cliente": {
+        "nome": "Maria Silva",
+        "cpf": "123.456.789-01",
+        "nascimento": "01/03/1995",
+        "email": "maria@email.com",
+        "telefone": "(31) 99999-8888",
+        "cep": "30130-000",
+        "endereco": "Rua das Flores",
+        "numero": "120"
+      },
+      "itens": [
+        {
+          "produto": 11,
+          "nome": "Feijão Tropeiro",
+          "quantidade": 2,
+          "preco": 38.9
+        },
+        {
+          "produto": 16,
+          "nome": "Pão de Queijo",
+          "quantidade": 1,
+          "preco": 19.9
+        },
+        {
+          "produto": 25,
+          "nome": "Café Mineiro",
+          "quantidade": 2,
+          "preco": 6.9
+        }
+      ],
+      "total": 111.5
+    },
+    {
+      "codigo": "1762622700002",
+      "data": "08/11/2026 12:58",
+      "cliente": {
+        "nome": "Ana D'Ávila",
+        "cpf": "987.654.321-00",
+        "nascimento": "22/09/1988",
+        "email": "ana.davila@email.com",
+        "telefone": "(31) 98888-7777",
+        "cep": "30140-010",
+        "endereco": "Avenida Brasil",
+        "numero": "45"
+      },
+      "itens": [
+        {
+          "produto": 2,
+          "nome": "Picanha na Brasa",
+          "quantidade": 1,
+          "preco": 69.9
+        },
+        {
+          "produto": 10,
+          "nome": "Caipirinha",
+          "quantidade": 2,
+          "preco": 18
+        }
+      ],
+      "total": 105.9
+    },
+    {
+      "codigo": "1762626300003",
+      "data": "08/11/2026 13:45",
+      "cliente": {
+        "nome": "Maria Silva",
+        "cpf": "123.456.789-01",
+        "nascimento": "01/03/1995",
+        "email": "maria@email.com",
+        "telefone": "(31) 99999-8888",
+        "cep": "30130-000",
+        "endereco": "Rua das Flores",
+        "numero": "120"
+      },
+      "itens": [
+        {
+          "produto": 14,
+          "nome": "Vaca Atolada",
+          "quantidade": 1,
+          "preco": 58
+        },
+        {
+          "produto": 21,
+          "nome": "Romeu e Julieta",
+          "quantidade": 2,
+          "preco": 15.9
+        },
+        {
+          "produto": 27,
+          "nome": "Quentão",
+          "quantidade": 1,
+          "preco": 12.9
+        }
+      ],
+      "total": 102.7
+    }
+  ]
+}

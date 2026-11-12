@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurante — Sabor & Brasa</title>
+</head>
+<body id="pagina-home">
+    <div class="header">
+        <a class="logo" href="index.html">Sabor<span>&</span>Brasa</a>
+        <div class="header-menu">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
+        <div class="header-direita">
+            <form id="form-busca" class="form-busca">
+                <input id="busca-header" class="campo-input" type="text" maxlength="40" placeholder="Buscar pratos...">
+                <button class="btn" aria-label="Buscar">🔍</button>
+            </form>
+            <a class="btn-contorno" href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+            <span id="saudacao" class="saudacao escondido"></span>
+            <button id="btn-sair" class="btn-contorno escondido">Sair</button>
+            <button id="btn-login" class="btn-contorno">Entrar</button>
+            <a id="btn-cadastro" class="btn" href="cadastro.html">Cadastrar</a>
+            <button id="btn-tema" class="btn-tema">🌙</button>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <div class="hero">
+            <h1>Sabor de casa,<br>fogo de verdade.</h1>
+            <p>Culinária brasileira preparada na brasa e os sabores de Minas Gerais, com ingredientes frescos. Peça online e receba quentinho onde estiver.</p>
+            <a class="btn-hero" href="produtos.html">Ver cardápio</a>
+        </div>
+
+        <h2 class="titulo-secao">Destaques da <span>casa</span></h2>
+        <div class="grid-produtos">
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="1" alt="Feijoada Completa">
+                    <span class="emoji-texto">🍲</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Feijoada Completa</h3>
+                    <p>Feijão preto, carnes, arroz, couve e farofa.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 49,90</span>
+                        <button class="btn btn-add" data-id="1">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="2" alt="Picanha na Brasa">
+                    <span class="emoji-texto">🥩</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Picanha na Brasa</h3>
+                    <p>Picanha grelhada com arroz, vinagrete e fritas.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 69,90</span>
+                        <button class="btn btn-add" data-id="2">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="3" alt="Moqueca de Peixe">
+                    <span class="emoji-texto">🐟</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Moqueca de Peixe</h3>
+                    <p>Peixe no leite de coco e dendê com pirão.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 59,90</span>
+                        <button class="btn btn-add" data-id="3">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="7" alt="Pudim de Leite">
+                    <span class="emoji-texto">🍮</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <h3>Pudim de Leite</h3>
+                    <p>Clássico pudim com calda de caramelo.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 16,00</span>
+                        <button class="btn btn-add" data-id="7">Adicionar</button>
+                    </div>
+                </div>
+        </div>
+
+        <h2 class="titulo-secao">Sabores de <span>Minas</span></h2>
+        <p class="texto-suave texto-secao">Receitas tradicionais mineiras, do fogão a lenha para a sua mesa.</p>
+        <div class="grid-produtos">
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="11" alt="Feijão Tropeiro">
+                    <span class="emoji-texto">🍛</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Feijão Tropeiro</h3>
+                    <p>Feijão, farinha de mandioca, bacon, linguiça, ovo e couve.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 38,90</span>
+                        <button class="btn btn-add" data-id="11">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="14" alt="Vaca Atolada">
+                    <span class="emoji-texto">🍖</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Vaca Atolada</h3>
+                    <p>Costela bovina cozida com mandioca, no fogão a lenha.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 58,00</span>
+                        <button class="btn btn-add" data-id="14">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="16" alt="Pão de Queijo">
+                    <span class="emoji-texto">🧀</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Pão de Queijo</h3>
+                    <p>Porção com 10 unidades, quentinhas.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 19,90</span>
+                        <button class="btn btn-add" data-id="16">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="21" alt="Romeu e Julieta">
+                    <span class="emoji-texto">🍰</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Romeu e Julieta</h3>
+                    <p>Queijo Minas fresco com goiabada cascão.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 15,90</span>
+                        <button class="btn btn-add" data-id="21">Adicionar</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="grid-info">
+            <div class="card-info">
+                <h3>🔥 Na brasa</h3>
+                <p>Carnes preparadas na hora em forno a lenha.</p>
+            </div>
+            <div class="card-info">
+                <h3>🚚 Entrega rápida</h3>
+                <p>Em média 40 minutos até a sua porta.</p>
+            </div>
+            <div class="card-info">
+                <h3>🧀 Direto de Minas</h3>
+                <p>Queijos, doces e café de produtores mineiros.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-cont">
+            <div class="footer-col">
+                <h4>Sabor & Brasa</h4>
+                <p>Culinária brasileira e mineira feita com carinho desde 2010.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Horário</h4>
+                <p>Ter–Dom, 11h às 23h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(11) 99999-0000</p>
+                <p>contato@saborebrasa.com</p>
+            </div>
+        </div>
+        <p class="footer-direitos">© 2026 Sabor & Brasa. Todos os direitos reservados.</p>
+    </div>
+
+    <dialog id="modal-login" class="modal">
+        <div class="modal-topo">
+            <h2>Entrar</h2>
+            <button id="fechar-modal" class="btn-contorno">✕</button>
+        </div>
+        <form id="form-login" class="form">
+            <div>
+                <label class="form-label" for="login-email">E-mail</label>
+                <input id="login-email" class="campo-input" type="email" maxlength="60" required>
+            </div>
+            <div>
+                <label class="form-label" for="login-senha">Senha</label>
+                <input id="login-senha" class="campo-input" type="password" minlength="6" maxlength="20" required>
+            </div>
+            <p id="erro-login" class="erro escondido">E-mail ou senha inválidos</p>
+            <button class="btn">Entrar</button>
+            <p class="texto-suave">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </form>
+    </dialog>
+
+    <div id="aviso" class="aviso"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

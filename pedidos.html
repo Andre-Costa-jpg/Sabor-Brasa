@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Meus pedidos — Sabor & Brasa</title>
+</head>
+<body id="pagina-pedidos">
+    <div class="header">
+        <a class="logo" href="index.html">Sabor<span>&</span>Brasa</a>
+        <div class="header-menu">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
+        <div class="header-direita">
+            <form id="form-busca" class="form-busca">
+                <input id="busca-header" class="campo-input" type="text" maxlength="40" placeholder="Buscar pratos...">
+                <button class="btn" aria-label="Buscar">🔍</button>
+            </form>
+            <a class="btn-contorno" href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+            <span id="saudacao" class="saudacao escondido"></span>
+            <button id="btn-sair" class="btn-contorno escondido">Sair</button>
+            <button id="btn-login" class="btn-contorno">Entrar</button>
+            <a id="btn-cadastro" class="btn" href="cadastro.html">Cadastrar</a>
+            <button id="btn-tema" class="btn-tema">🌙</button>
+        </div>
+    </div>
+
+    <div class="conteudo conteudo-estreito">
+        <h1>Meus <span>pedidos</span></h1>
+        <div class="acoes-pedidos">
+            <button id="btn-baixar" class="btn">Baixar arquivo JSON</button>
+            <p class="texto-suave">Pedidos, clientes e cardápio em um arquivo. O restaurante importa esse arquivo no sistema de gestão.</p>
+        </div>
+        <input id="busca-pedido" class="campo-input campo-filtro" type="text" maxlength="13" placeholder="Buscar pelo número do pedido">
+        <p id="aviso-login" class="texto-suave">Faça <a href="#" id="link-login">login</a> para ver seus pedidos.</p>
+        <div id="lista-pedidos">
+            <div class="card-pedido escondido" id="pedido-1">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-1"></span></h3>
+                    <span class="status" id="status-1"></span>
+                </div>
+                <p class="texto-suave" id="data-1"></p>
+                <p id="itens-1"></p>
+                <p class="preco" id="total-1"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-2">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-2"></span></h3>
+                    <span class="status" id="status-2"></span>
+                </div>
+                <p class="texto-suave" id="data-2"></p>
+                <p id="itens-2"></p>
+                <p class="preco" id="total-2"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-3">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-3"></span></h3>
+                    <span class="status" id="status-3"></span>
+                </div>
+                <p class="texto-suave" id="data-3"></p>
+                <p id="itens-3"></p>
+                <p class="preco" id="total-3"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-4">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-4"></span></h3>
+                    <span class="status" id="status-4"></span>
+                </div>
+                <p class="texto-suave" id="data-4"></p>
+                <p id="itens-4"></p>
+                <p class="preco" id="total-4"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-5">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-5"></span></h3>
+                    <span class="status" id="status-5"></span>
+                </div>
+                <p class="texto-suave" id="data-5"></p>
+                <p id="itens-5"></p>
+                <p class="preco" id="total-5"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-6">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-6"></span></h3>
+                    <span class="status" id="status-6"></span>
+                </div>
+                <p class="texto-suave" id="data-6"></p>
+                <p id="itens-6"></p>
+                <p class="preco" id="total-6"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-7">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-7"></span></h3>
+                    <span class="status" id="status-7"></span>
+                </div>
+                <p class="texto-suave" id="data-7"></p>
+                <p id="itens-7"></p>
+                <p class="preco" id="total-7"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-8">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-8"></span></h3>
+                    <span class="status" id="status-8"></span>
+                </div>
+                <p class="texto-suave" id="data-8"></p>
+                <p id="itens-8"></p>
+                <p class="preco" id="total-8"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-9">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-9"></span></h3>
+                    <span class="status" id="status-9"></span>
+                </div>
+                <p class="texto-suave" id="data-9"></p>
+                <p id="itens-9"></p>
+                <p class="preco" id="total-9"></p>
+            </div>
+            <div class="card-pedido escondido" id="pedido-10">
+                <div class="pedido-topo">
+                    <h3>Pedido #<span id="numero-10"></span></h3>
+                    <span class="status" id="status-10"></span>
+                </div>
+                <p class="texto-suave" id="data-10"></p>
+                <p id="itens-10"></p>
+                <p class="preco" id="total-10"></p>
+            </div>
+            <p id="sem-pedidos" class="texto-suave escondido">Nenhum pedido encontrado.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-cont">
+            <div class="footer-col">
+                <h4>Sabor & Brasa</h4>
+                <p>Culinária brasileira e mineira feita com carinho desde 2010.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Horário</h4>
+                <p>Ter–Dom, 11h às 23h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(11) 99999-0000</p>
+                <p>contato@saborebrasa.com</p>
+            </div>
+        </div>
+        <p class="footer-direitos">© 2026 Sabor & Brasa. Todos os direitos reservados.</p>
+    </div>
+
+    <dialog id="modal-login" class="modal">
+        <div class="modal-topo">
+            <h2>Entrar</h2>
+            <button id="fechar-modal" class="btn-contorno">✕</button>
+        </div>
+        <form id="form-login" class="form">
+            <div>
+                <label class="form-label" for="login-email">E-mail</label>
+                <input id="login-email" class="campo-input" type="email" maxlength="60" required>
+            </div>
+            <div>
+                <label class="form-label" for="login-senha">Senha</label>
+                <input id="login-senha" class="campo-input" type="password" minlength="6" maxlength="20" required>
+            </div>
+            <p id="erro-login" class="erro escondido">E-mail ou senha inválidos</p>
+            <button class="btn">Entrar</button>
+            <p class="texto-suave">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </form>
+    </dialog>
+
+    <div id="aviso" class="aviso"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro — Sabor & Brasa</title>
+</head>
+<body id="pagina-cadastro">
+    <div class="header">
+        <a class="logo" href="index.html">Sabor<span>&</span>Brasa</a>
+        <div class="header-menu">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
+        <div class="header-direita">
+            <form id="form-busca" class="form-busca">
+                <input id="busca-header" class="campo-input" type="text" maxlength="40" placeholder="Buscar pratos...">
+                <button class="btn" aria-label="Buscar">🔍</button>
+            </form>
+            <a class="btn-contorno" href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+            <span id="saudacao" class="saudacao escondido"></span>
+            <button id="btn-sair" class="btn-contorno escondido">Sair</button>
+            <button id="btn-login" class="btn-contorno">Entrar</button>
+            <a id="btn-cadastro" class="btn" href="cadastro.html">Cadastrar</a>
+            <button id="btn-tema" class="btn-tema">🌙</button>
+        </div>
+    </div>
+
+    <div class="conteudo conteudo-estreito">
+        <div class="card-form">
+            <h1>Criar <span>conta</span></h1>
+            <p class="texto-suave">Já tem conta? <a href="#" id="link-login">Entrar</a></p>
+            <form id="form-cadastro" class="form">
+                <div>
+                    <label class="form-label" for="nome">Nome completo</label>
+                    <input id="nome" class="campo-input" type="text" maxlength="60" required>
+                </div>
+                <div class="form-linha">
+                    <div>
+                        <label class="form-label" for="cpf">CPF</label>
+                        <input id="cpf" class="campo-input" type="text" maxlength="14" placeholder="000.000.000-00" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="nasc">Data de nascimento</label>
+                        <input id="nasc" class="campo-input" type="text" maxlength="10" placeholder="dd/mm/aaaa" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="tel">Telefone</label>
+                        <input id="tel" class="campo-input" type="text" maxlength="15" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="cep">CEP</label>
+                        <input id="cep" class="campo-input" type="text" maxlength="9" placeholder="00000-000" required>
+                    </div>
+                </div>
+                <div class="form-linha">
+                    <div>
+                        <label class="form-label" for="endereco">Endereço</label>
+                        <input id="endereco" class="campo-input" type="text" maxlength="80" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="numero">Número</label>
+                        <input id="numero" class="campo-input" type="text" maxlength="6" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="email">E-mail</label>
+                    <input id="email" class="campo-input" type="email" maxlength="60" required>
+                </div>
+                <div class="form-linha">
+                    <div>
+                        <label class="form-label" for="senha">Senha</label>
+                        <input id="senha" class="campo-input" type="password" minlength="6" maxlength="20" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="senha2">Confirmar senha</label>
+                        <input id="senha2" class="campo-input" type="password" minlength="6" maxlength="20" required>
+                    </div>
+                </div>
+                <button class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-cont">
+            <div class="footer-col">
+                <h4>Sabor & Brasa</h4>
+                <p>Culinária brasileira e mineira feita com carinho desde 2010.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Horário</h4>
+                <p>Ter–Dom, 11h às 23h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(11) 99999-0000</p>
+                <p>contato@saborebrasa.com</p>
+            </div>
+        </div>
+        <p class="footer-direitos">© 2026 Sabor & Brasa. Todos os direitos reservados.</p>
+    </div>
+
+    <dialog id="modal-login" class="modal">
+        <div class="modal-topo">
+            <h2>Entrar</h2>
+            <button id="fechar-modal" class="btn-contorno">✕</button>
+        </div>
+        <form id="form-login" class="form">
+            <div>
+                <label class="form-label" for="login-email">E-mail</label>
+                <input id="login-email" class="campo-input" type="email" maxlength="60" required>
+            </div>
+            <div>
+                <label class="form-label" for="login-senha">Senha</label>
+                <input id="login-senha" class="campo-input" type="password" minlength="6" maxlength="20" required>
+            </div>
+            <p id="erro-login" class="erro escondido">E-mail ou senha inválidos</p>
+            <button class="btn">Entrar</button>
+            <p class="texto-suave">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </form>
+    </dialog>
+
+    <div id="aviso" class="aviso"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

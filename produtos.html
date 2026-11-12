@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardápio — Sabor & Brasa</title>
+</head>
+<body id="pagina-produtos">
+    <div class="header">
+        <a class="logo" href="index.html">Sabor<span>&</span>Brasa</a>
+        <div class="header-menu">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Cardápio</a>
+            <a href="pedidos.html">Pedidos</a>
+            <a href="perfil.html">Perfil</a>
+        </div>
+        <div class="header-direita">
+            <form id="form-busca" class="form-busca">
+                <input id="busca-header" class="campo-input" type="text" maxlength="40" placeholder="Buscar pratos...">
+                <button class="btn" aria-label="Buscar">🔍</button>
+            </form>
+            <a class="btn-contorno" href="carrinho.html">Carrinho (<span id="contador">0</span>)</a>
+            <span id="saudacao" class="saudacao escondido"></span>
+            <button id="btn-sair" class="btn-contorno escondido">Sair</button>
+            <button id="btn-login" class="btn-contorno">Entrar</button>
+            <a id="btn-cadastro" class="btn" href="cadastro.html">Cadastrar</a>
+            <button id="btn-tema" class="btn-tema">🌙</button>
+        </div>
+    </div>
+
+    <div class="conteudo">
+        <h1>Cardápio</h1>
+        <input id="filtro-texto" class="campo-input campo-filtro" type="text" maxlength="40" placeholder="Filtrar pratos...">
+        <div class="filtros">
+            <button class="btn-filtro ativo" data-categoria="Todos">Todos</button>
+            <button class="btn-filtro" data-categoria="Mineiros">🧀 Mineiros</button>
+            <button class="btn-filtro" data-categoria="Pratos">Pratos</button>
+            <button class="btn-filtro" data-categoria="Entradas">Entradas</button>
+            <button class="btn-filtro" data-categoria="Sobremesas">Sobremesas</button>
+            <button class="btn-filtro" data-categoria="Bebidas">Bebidas</button>
+        </div>
+        <div class="grid-produtos" id="lista-produtos">
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="1" alt="Feijoada Completa">
+                    <span class="emoji-texto">🍲</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Feijoada Completa</h3>
+                    <p>Feijão preto, carnes, arroz, couve e farofa.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 49,90</span>
+                        <button class="btn btn-add" data-id="1">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="2" alt="Picanha na Brasa">
+                    <span class="emoji-texto">🥩</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Picanha na Brasa</h3>
+                    <p>Picanha grelhada com arroz, vinagrete e fritas.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 69,90</span>
+                        <button class="btn btn-add" data-id="2">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="3" alt="Moqueca de Peixe">
+                    <span class="emoji-texto">🐟</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Moqueca de Peixe</h3>
+                    <p>Peixe no leite de coco e dendê com pirão.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 59,90</span>
+                        <button class="btn btn-add" data-id="3">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="4" alt="Risoto de Cogumelos">
+                    <span class="emoji-texto">🍚</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <h3>Risoto de Cogumelos</h3>
+                    <p>Arbóreo cremoso com mix de cogumelos.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 52,00</span>
+                        <button class="btn btn-add" data-id="4">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="5" alt="Pastel de Queijo">
+                    <span class="emoji-texto">🥟</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <h3>Pastel de Queijo</h3>
+                    <p>Massa crocante recheada com queijo.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 14,90</span>
+                        <button class="btn btn-add" data-id="5">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="6" alt="Bolinho de Bacalhau">
+                    <span class="emoji-texto">🧆</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <h3>Bolinho de Bacalhau</h3>
+                    <p>Porção com 6 unidades.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 24,90</span>
+                        <button class="btn btn-add" data-id="6">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="7" alt="Pudim de Leite">
+                    <span class="emoji-texto">🍮</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <h3>Pudim de Leite</h3>
+                    <p>Clássico pudim com calda de caramelo.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 16,00</span>
+                        <button class="btn btn-add" data-id="7">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="8" alt="Brigadeiro Gourmet">
+                    <span class="emoji-texto">🍫</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p>Caixa com 4 brigadeiros.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 12,00</span>
+                        <button class="btn btn-add" data-id="8">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Bebidas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="9" alt="Suco Natural">
+                    <span class="emoji-texto">🧃</span>
+                </div>
+                    <span class="card-categoria">Bebidas</span>
+                    <h3>Suco Natural</h3>
+                    <p>Laranja, limão, maracujá ou abacaxi.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 9,90</span>
+                        <button class="btn btn-add" data-id="9">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Bebidas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="10" alt="Caipirinha">
+                    <span class="emoji-texto">🍹</span>
+                </div>
+                    <span class="card-categoria">Bebidas</span>
+                    <h3>Caipirinha</h3>
+                    <p>Limão, cachaça artesanal e açúcar.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 18,00</span>
+                        <button class="btn btn-add" data-id="10">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="11" alt="Feijão Tropeiro">
+                    <span class="emoji-texto">🍛</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Feijão Tropeiro</h3>
+                    <p>Feijão, farinha de mandioca, bacon, linguiça, ovo e couve.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 38,90</span>
+                        <button class="btn btn-add" data-id="11">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="12" alt="Frango com Quiabo">
+                    <span class="emoji-texto">🍗</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Frango com Quiabo</h3>
+                    <p>Frango caipira refogado com quiabo, servido com arroz e angu.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 42,00</span>
+                        <button class="btn btn-add" data-id="12">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="13" alt="Tutu de Feijão">
+                    <span class="emoji-texto">🥘</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Tutu de Feijão</h3>
+                    <p>Tutu cremoso com couve, linguiça, torresmo e ovo frito.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 44,90</span>
+                        <button class="btn btn-add" data-id="13">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="14" alt="Vaca Atolada">
+                    <span class="emoji-texto">🍖</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Vaca Atolada</h3>
+                    <p>Costela bovina cozida com mandioca, no fogão a lenha.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 58,00</span>
+                        <button class="btn btn-add" data-id="14">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Pratos" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="15" alt="Leitão à Pururuca">
+                    <span class="emoji-texto">🐖</span>
+                </div>
+                    <span class="card-categoria">Pratos</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Leitão à Pururuca</h3>
+                    <p>Leitão assado com a pele bem crocante, farofa e couve.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 64,90</span>
+                        <button class="btn btn-add" data-id="15">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="16" alt="Pão de Queijo">
+                    <span class="emoji-texto">🧀</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Pão de Queijo</h3>
+                    <p>Porção com 10 unidades, quentinhas.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 19,90</span>
+                        <button class="btn btn-add" data-id="16">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="17" alt="Torresmo Crocante">
+                    <span class="emoji-texto">🥓</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Torresmo Crocante</h3>
+                    <p>Porção de torresmo de barriga bem sequinho.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 26,90</span>
+                        <button class="btn btn-add" data-id="17">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="18" alt="Queijo Minas Frito">
+                    <span class="emoji-texto">🍢</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Queijo Minas Frito</h3>
+                    <p>Queijo Minas curado empanado, com geleia de pimenta.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 28,90</span>
+                        <button class="btn btn-add" data-id="18">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="19" alt="Mandioca Frita">
+                    <span class="emoji-texto">🍟</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Mandioca Frita</h3>
+                    <p>Porção de mandioca frita com molho da casa.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 22,00</span>
+                        <button class="btn btn-add" data-id="19">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Entradas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="20" alt="Pastel de Angu">
+                    <span class="emoji-texto">🌽</span>
+                </div>
+                    <span class="card-categoria">Entradas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Pastel de Angu</h3>
+                    <p>Pastel recheado com angu e carne moída. 4 unidades.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 21,90</span>
+                        <button class="btn btn-add" data-id="20">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="21" alt="Romeu e Julieta">
+                    <span class="emoji-texto">🍰</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Romeu e Julieta</h3>
+                    <p>Queijo Minas fresco com goiabada cascão.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 15,90</span>
+                        <button class="btn btn-add" data-id="21">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="22" alt="Bolo de Fubá">
+                    <span class="emoji-texto">🧁</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Bolo de Fubá</h3>
+                    <p>Bolo de fubá cremoso, feito na hora.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 13,50</span>
+                        <button class="btn btn-add" data-id="22">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="23" alt="Doce de Leite Caseiro">
+                    <span class="emoji-texto">🍯</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Doce de Leite Caseiro</h3>
+                    <p>Doce de leite em pedaços, estilo Viçosa.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 14,90</span>
+                        <button class="btn btn-add" data-id="23">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Sobremesas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="24" alt="Pé de Moleque">
+                    <span class="emoji-texto">🥜</span>
+                </div>
+                    <span class="card-categoria">Sobremesas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Pé de Moleque</h3>
+                    <p>Amendoim e rapadura, crocante. 4 unidades.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 11,90</span>
+                        <button class="btn btn-add" data-id="24">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Bebidas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="25" alt="Café Mineiro">
+                    <span class="emoji-texto">☕</span>
+                </div>
+                    <span class="card-categoria">Bebidas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Café Mineiro</h3>
+                    <p>Café coado na hora, da Serra da Mantiqueira.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 6,90</span>
+                        <button class="btn btn-add" data-id="25">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Bebidas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="26" alt="Cachaça de Salinas">
+                    <span class="emoji-texto">🥃</span>
+                </div>
+                    <span class="card-categoria">Bebidas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Cachaça de Salinas</h3>
+                    <p>Dose de cachaça artesanal envelhecida.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 16,90</span>
+                        <button class="btn btn-add" data-id="26">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-produto" data-categoria="Bebidas" data-origem="Minas">
+                    <div class="card-emoji">
+                    <img class="card-foto escondido" data-id="27" alt="Quentão">
+                    <span class="emoji-texto">🍵</span>
+                </div>
+                    <span class="card-categoria">Bebidas</span>
+                    <span class="card-selo">Minas Gerais</span>
+                    <h3>Quentão</h3>
+                    <p>Cachaça, gengibre, cravo e canela, bem quente.</p>
+                    <div class="card-rodape">
+                        <span class="preco">R$ 12,90</span>
+                        <button class="btn btn-add" data-id="27">Adicionar</button>
+                    </div>
+                </div>
+        </div>
+        <p id="sem-produtos" class="texto-suave escondido">Nenhum produto encontrado.</p>
+    </div>
+
+    <div class="footer">
+        <div class="footer-cont">
+            <div class="footer-col">
+                <h4>Sabor & Brasa</h4>
+                <p>Culinária brasileira e mineira feita com carinho desde 2010.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Horário</h4>
+                <p>Ter–Dom, 11h às 23h</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(11) 99999-0000</p>
+                <p>contato@saborebrasa.com</p>
+            </div>
+        </div>
+        <p class="footer-direitos">© 2026 Sabor & Brasa. Todos os direitos reservados.</p>
+    </div>
+
+    <dialog id="modal-login" class="modal">
+        <div class="modal-topo">
+            <h2>Entrar</h2>
+            <button id="fechar-modal" class="btn-contorno">✕</button>
+        </div>
+        <form id="form-login" class="form">
+            <div>
+                <label class="form-label" for="login-email">E-mail</label>
+                <input id="login-email" class="campo-input" type="email" maxlength="60" required>
+            </div>
+            <div>
+                <label class="form-label" for="login-senha">Senha</label>
+                <input id="login-senha" class="campo-input" type="password" minlength="6" maxlength="20" required>
+            </div>
+            <p id="erro-login" class="erro escondido">E-mail ou senha inválidos</p>
+            <button class="btn">Entrar</button>
+            <p class="texto-suave">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </form>
+    </dialog>
+
+    <div id="aviso" class="aviso"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
